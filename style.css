@@ -16,9 +16,10 @@ p, a {
 .head {
     background-image: url(./images/download\ \(13\)-bg.png);
     background-repeat: no-repeat;
-    background-position: center;
+    min-height: 100vh;
+    height: auto;
     background-size: cover;
-    height: 100vh;
+    background-position: top center;
     animation-name: headeranimation;
     animation-duration: 14s;
     animation-delay: 2s;
@@ -122,31 +123,25 @@ p, a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 50px;
     background-color: #e1dcc9;
     color: #412d15;
     border-radius: 20rem;
     padding: 60px 80px;
-    width:800px;
-    margin: 80px auto;
+    width:70%;
+    margin: 80px 15%;
     box-shadow: 0 0 30px #231708;
-    /* transition-property: transform ;
-    transition-duration: 0.5s;
-    transition-timing-function: linear; */
 }
 .section2 {
     margin-bottom: 200px;
 }
-/* .section1:hover {
-    transform: translatex(20px);
-}
-.section2:hover{
-    transform: translatex(-20px);
-} */
-
 .section1 >div >img, .section2 > div >img {
-    height: 250px;
+    width: 250px;
     border-radius: 10rem;
+}
+.cityinfo {
+    width: 250px;
 }
 .cityinfo >p, .cityinfo >ul>li {
     font-size: 0.76rem;
@@ -180,6 +175,7 @@ p, a {
 .card >img {
     display: block;
     width: 100%;
+    height: 100%;
     transition: 0.4s;
 }
 .overlay {
@@ -239,6 +235,199 @@ p, a {
     grid-column: 5/ span 4;
     grid-row: 4;
 }
-/* .card1, .card1, .card3, .card4, .card5, .card6, .card7, .card8 {
-    position: relative;
-} */
+#spotlight {
+    width: 70%;
+    margin: 150px auto;
+    color: #e1dcc9;
+}
+#spotlight > h1, #spotlight > h3 {
+    text-align: center;
+}
+#spotlight > img {
+    width: 90%;
+    margin: 100px 5%;
+    border-radius: 80px;
+    border: 5px solid #e1dcc9;
+    border-style: dashed;
+}
+#spotlight > p {
+    text-align: center;
+    font-size: 14px;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+.list > div > ul {
+    padding-left: 20px;
+}
+.quote {
+    text-align: center;
+    margin-top: 100px;
+}
+.quote > div {
+    background-color: rgba(225, 220, 201, 0.3);
+    display: inline-block;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 20px;
+    border-left: 2px solid #e1dcc9;
+    border-bottom: 2px solid #e1dcc9;
+}
+#submitsection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+#submitsection > div {
+    width: 500px;
+    color: #231708;
+}
+#submitsection > div > h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+}
+form >input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 0;
+    background-color: #412d15;
+    color: #e1dcc9;
+}
+::placeholder {
+    color: rgba(225, 220, 201, 0.6)
+}
+form >textarea {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 0;
+    background-color: #412d15;
+    resize: none;
+    color: #e1dcc9;
+}
+form input:focus, form textarea:focus{
+    outline: none;
+    box-shadow: 0 0 10px #231708;
+    transition: .3s;
+}
+.foot >div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    padding: 100px;
+    padding-bottom: 70px;
+    color: #e1dcc9;
+}
+.foot > div > div {
+    width: 200px;
+}
+.foot > div > .inspired {
+    width: 500px;
+}
+.foot > div > div > h3 {
+    margin-bottom: 10px;
+}
+.foot > div > div > p {
+    font-size: 14px;
+    line-height: 20px;
+}
+.foot > div > div >ul >li {
+    list-style: none;
+    margin: 8px;
+}
+.foot > div > div >ul >li >a {
+    color: #e1dcc9;
+    border-left: 2px solid #e1dcc9;
+    padding: 0px 10px;
+    transition: 0.5s;
+}
+.foot > div > div >ul >li >a:hover {
+    background-color: #e1dcc9;
+    border-radius: 5px;
+    color: #412d15;
+}
+.foot > div > div >div >a >i {
+    margin: 12px 12px 12px 0;
+    color: #e1dcc9;
+    padding: 10px;
+}
+.foot >p {
+    color: #e1dcc9;
+    text-align: center;
+    margin: 30px;
+}
+
+#menu-toggle{
+    display: none;
+}
+.burger{
+    display: none;
+    font-size: 1.8rem;
+    color: #412d15;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 992px) {
+    .navbar{
+        padding: 15px 30px;
+        position: relative;
+    }
+    .burger{
+        display: block;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(225,220,201,0.95);
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .menu ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    #menu-toggle:checked ~ .menu{
+        display: block;
+    }
+    .bigtitle{
+        width: 80%;
+        padding: auto;
+        height: auto;
+        text-align: center;
+    }
+
+    .bigtitle h1{
+        font-size: 2.5rem;
+    }
+    .overlay >h3 {
+        font-size: 16px;
+    }
+    .overlay >p {
+            font-size: 10px;
+    }
+    .list {
+        gap: 50px;
+    }
+}
